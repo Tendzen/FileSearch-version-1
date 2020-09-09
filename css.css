@@ -1,0 +1,127 @@
+body{
+    min-width: 0;
+    text-align: center;
+    font-family: "Open Sans","Lucida Sans",sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    color: #424242;
+    background: #eee;
+}
+html, body {
+    width: 100%;
+    height: 100%;
+}
+.space{
+    display: block;
+    min-height: 150px;
+    text-align: center;
+}
+article{
+    display: block;
+    max-width: 900px;
+    line-height: 28px;
+    text-align: justify;
+    margin: 10px auto;
+}
+
+main{
+    width: 100%;
+    max-width: 1100px;
+    min-height: 780px;
+    background: #fff;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0px 3px 4px #180cc0;
+    margin: 0 auto 35px auto;
+    overflow: hidden;
+}
+
+article.typeFiles h1 {
+    font-size: 24px;
+    line-height: 34px;
+    padding-top: 35px;
+    border-bottom: 4px solid #0f45d8;
+    padding-bottom: 35px;
+    color:#474747;
+}
+*{
+    padding:0;
+    margin:0;
+    border:0;
+}
+div{
+    display: block;
+}
+header a.home{
+    display: inline-block;
+    width: 115px;
+    height: 50px;
+    background: url(/projectMimeTypes/iconTypFiles/paper.png) no-repeat;
+    background-size: 100px 50px;
+    margin-top: 7px;
+}
+header #content {
+    padding: 0;
+}
+
+.headerName{
+    
+    position: absolute;
+    font-size: 26px;
+    padding-top:4px;
+    padding-left:115px;
+}
+
+a {
+    color: #ffffff;
+    text-decoration: none;
+}
+table{
+    display:table;
+}
+.listBox{
+    padding-bottom: 45px;
+}
+.typeFiles img {
+    display: block;
+    max-width: 100%;
+    padding-left:25px;
+}
+table.list, table.slist {
+    box-sizing: border-box;
+    width: 100%;
+    border-collapse: collapse;
+    border: 1px solid #1565c0;
+    margin: 15px 0;
+}
+table.list td, table.slist td {
+    height: 36px;
+    vertical-align: middle;
+    padding: 2px 10px 3px;
+}
+
+table.list th, table.slist th {
+    padding: 7px 10px 8px;
+    text-align: left;
+    color: #fff;
+    background: #1e88e5;
+}
+input[type="checkbox"]{
+    width: 25px;
+    height: 40px; 
+    cursor: pointer;
+}
+
+header{
+    z-index: 2;
+    position: fixed;
+    width: 100%;
+    height: 60px;
+    background-image: linear-gradient(#075fb6,#6faaee);
+    box-shadow: 0px 1px 2px #80cbc4;
+}
+header #content {
+    max-width: 980px;
+    text-align: left;
+    margin: auto;
+}

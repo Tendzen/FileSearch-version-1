@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>UI - search for files</title>
+    <meta charset="utf-8"/>
+    <link rel="stylesheet" href="css.css"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  </head>
+  <body>
+      <header>
+        <div id='content'>
+          <a  class='home' href="">
+            <span class='headerName'><strong>File</strong>Search</span>
+          </a>
+        </div>
+      </header>
+      <div class='space'>
+      </div>
+      <main>
+        <div class="wrap">
+          <article class='typeFiles'>
+            <h1>
+              Select the file type to search for:
+            </h1>
+            <div class='listBox'>
+              <table class='list'>
+                <tbody>
+                  <tr>
+                    <th><input type="checkbox" id="select-all"></th>
+                    <th>File Type</th>
+                    <th>File Icon</th>
+                  </tr>
+                  <tr>
+                    <td>
+                      <input type="checkbox" name="file types" value="doc" id='checkbox'>
+                    </td>
+                    <td> <label for="checkbox">Documents</label></td>
+                    <td>
+                      <img src="/projectMimeTypes/iconTypFiles/google-docs.png" alt="Document icon">
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <input type="checkbox" name="file types" value="pdf" id='checkbox2'>
+                    </td>
+                    <td><label for="checkbox2">PDFs</label></td>
+                    <td>
+                      <img src="/projectMimeTypes/iconTypFiles/pdf.png" alt="Pdf icon">
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <input type="checkbox" name="file types" value="photo" id='ckeckbox3'>
+                    </td>
+                    <td><label for="ckeckbox3">Photos & images</label></td>
+                    <td>
+                      <img src="/projectMimeTypes/iconTypFiles/photo.png" alt="Photo icon">
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <input type="checkbox" name="file types" value="video" id='ckeckbox4'>
+                    </td>
+                    <td><label for="ckeckbox4">Video</label></td>
+                    <td>
+                      <img src="/projectMimeTypes/iconTypFiles/cinema.png" alt="video icon">
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <input type="checkbox" name="file types" value="txt" id='ckeckbox5'>
+                    </td>
+                    <td><label for="ckeckbox5">Text</label></td>
+                    <td>
+                      <img src="/projectMimeTypes/iconTypFiles/txt.png" alt="txt icon">
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <input type="checkbox" name="file types" value="audio" id='ckeckbox6'>
+                    </td>
+                    <td><label for="ckeckbox6">Audio</label></td>
+                    <td>
+                      <img src="/projectMimeTypes/iconTypFiles/headphones.png" alt="sound icon">
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <input type="checkbox" name="file types" value="spreadsheets" id='ckeckbox7'>
+                    </td>
+                    <td><label for="ckeckbox7">Spreadsheets</label></td>
+                    <td>
+                      <img src="/projectMimeTypes/iconTypFiles/spreadsheet.png" alt="spreadsheet icon">
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <input type="checkbox" name="file types" value="folders" id='ckeckbox8'>
+                    </td>
+                    <td><label for="ckeckbox8">Folders</label></td>
+                    <td>
+                      <img src="/projectMimeTypes/iconTypFiles/folder.png" alt="folder icon">
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </article>
+        </div> 
+      </main>
+      <script>
+        $(document).ready(function() {
+          $('#select-all').click(function() {
+              $('input[type="checkbox"]').prop('checked', this.checked);
+            })
+          });
+      </script>
+  </body>
+</html>
