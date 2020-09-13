@@ -10,7 +10,7 @@
   <body>
       <header>
         <div id='content'>
-          <a  class='home' href="">
+          <a  class='home' href="/projectMimeTypes/index.html">
             <span class='headerName'><strong>File</strong>Search</span>
           </a>
         </div>
@@ -24,6 +24,7 @@
               Select the file type to search for:
             </h1>
             <div class='listBox'>
+              <form onsubmit="return handleData()">
               <table class='list'>
                 <tbody>
                   <tr>
@@ -33,16 +34,16 @@
                   </tr>
                   <tr>
                     <td>
-                      <input type="checkbox" name="file types" value="doc" id='checkbox'>
+                      <input type="checkbox" name="file types" value="'doc'" id='checkbox'>
                     </td>
-                    <td> <label for="checkbox">Documents</label></td>
+                    <td><label for="checkbox">Documents</label></td>
                     <td>
                       <img src="/projectMimeTypes/iconTypFiles/google-docs.png" alt="Document icon">
                     </td>
                   </tr>
                   <tr>
                     <td>
-                      <input type="checkbox" name="file types" value="pdf" id='checkbox2'>
+                      <input type="checkbox" name="file types" value="'pdf'" id='checkbox2'>
                     </td>
                     <td><label for="checkbox2">PDFs</label></td>
                     <td>
@@ -51,16 +52,16 @@
                   </tr>
                   <tr>
                     <td>
-                      <input type="checkbox" name="file types" value="photo" id='ckeckbox3'>
+                      <input type="checkbox" name="file types" value="'image'" id='ckeckbox3'>
                     </td>
-                    <td><label for="ckeckbox3">Photos & images</label></td>
+                    <td><label for="ckeckbox3">Photos & Images</label></td>
                     <td>
                       <img src="/projectMimeTypes/iconTypFiles/photo.png" alt="Photo icon">
                     </td>
                   </tr>
                   <tr>
                     <td>
-                      <input type="checkbox" name="file types" value="video" id='ckeckbox4'>
+                      <input type="checkbox" name="file types" value="'video'" id='ckeckbox4'>
                     </td>
                     <td><label for="ckeckbox4">Video</label></td>
                     <td>
@@ -69,7 +70,7 @@
                   </tr>
                   <tr>
                     <td>
-                      <input type="checkbox" name="file types" value="txt" id='ckeckbox5'>
+                      <input type="checkbox" name="file types" value="'txt'" id='ckeckbox5'>
                     </td>
                     <td><label for="ckeckbox5">Text</label></td>
                     <td>
@@ -78,7 +79,7 @@
                   </tr>
                   <tr>
                     <td>
-                      <input type="checkbox" name="file types" value="audio" id='ckeckbox6'>
+                      <input type="checkbox" name="file types" value="'audio'" id='ckeckbox6'>
                     </td>
                     <td><label for="ckeckbox6">Audio</label></td>
                     <td>
@@ -87,7 +88,7 @@
                   </tr>
                   <tr>
                     <td>
-                      <input type="checkbox" name="file types" value="spreadsheets" id='ckeckbox7'>
+                      <input type="checkbox" name="file types" value="'spreadsheets'" id='ckeckbox7'>
                     </td>
                     <td><label for="ckeckbox7">Spreadsheets</label></td>
                     <td>
@@ -96,7 +97,7 @@
                   </tr>
                   <tr>
                     <td>
-                      <input type="checkbox" name="file types" value="folders" id='ckeckbox8'>
+                      <input type="checkbox" name="file types" value="'folders'" id='ckeckbox8'>
                     </td>
                     <td><label for="ckeckbox8">Folders</label></td>
                     <td>
@@ -105,16 +106,22 @@
                   </tr>
                 </tbody>
               </table>
+              <input type="submit" value="Submit" id='submitForm' >
+            </form>
+            <button id='showStringButton'>
+              
+              Copy Quary String
+            </button>
             </div>
           </article>
+          <p id='strType'></p>
         </div> 
       </main>
+      <script src="/projectMimeTypes/js.js"></script>
+      <script src="/projectMimeTypes/getData.js"></script>
       <script>
-        $(document).ready(function() {
-          $('#select-all').click(function() {
-              $('input[type="checkbox"]').prop('checked', this.checked);
-            })
-          });
+        document.getElementById('select-all').addEventListener('click',selectAllCheckbox);
+        let sumbit = document.getElementById('submitForm');
       </script>
   </body>
 </html>

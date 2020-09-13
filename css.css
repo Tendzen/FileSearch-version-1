@@ -16,6 +16,24 @@ html, body {
     min-height: 150px;
     text-align: center;
 }
+#submitForm{
+    display: block;
+    width: 100%;
+    font-size: 32px;
+    background: #64a2e8;
+    color:#fff;
+    cursor: pointer;
+}
+#showStringButton{
+    display: none;
+    width: 100%;
+    font-size: 32px;
+    margin-top: 50px;
+    color:#fff;
+    background: #075fb6;
+    cursor: pointer;
+}
+
 article{
     display: block;
     max-width: 900px;
