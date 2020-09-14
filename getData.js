@@ -1,6 +1,6 @@
 "use strict";
 
-function handleData()
+function getData()
 {
     let mimeTypeArray = [];
     let formData = new FormData(document.querySelector("form"));
